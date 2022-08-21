@@ -15,10 +15,17 @@
 }
 .selected_player{
     background-color: black;
-    padding: 50px 100px;
+    padding: 50px 10px 50px 10px;
     border-radius: 5px;
     margin-left: 50px;
 }
 .selected_player ul li{
     margin-bottom: 30px;
+    padding-left: 50px;
+}
+.budget{
+    background-color: black;
+    padding: 50px 10px 50px 10px;
+    border-radius: 5px;
+    margin-left: 50px;
 }
