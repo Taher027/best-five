@@ -1,3 +1,24 @@
 .banner_height{
     height: 60vh;
 }
+.img_max_height{
+    height: 250px;
+}
+.btn_width{
+    padding:10px 100px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+}
+.btn_width:hover{
+    background-color: blueviolet;
+}
+.selected_player{
+    background-color: black;
+    padding: 50px 100px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.selected_player ul li{
+    margin-bottom: 30px;
+}
