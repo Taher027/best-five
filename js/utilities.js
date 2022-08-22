@@ -7,18 +7,12 @@ function getInputValue(inputId){
 
 
     const newInputValue = parseFloat(newInputValueString);
-    inputField.value = '';
     return newInputValue;
 }
 
-
-function getElementValue(elementId){
-
-    const inputField = document.getElementById(elementId);
-    const newInputValueString = inputField.innerText;
-
-
-    const newInputValue = parseFloat(newInputValueString);
-    inputField.innerText = '';
-    return newInputValue;
+function getElementValue(ElementId){
+    const elementValue = document.getElementById(ElementId);
 }
+
+{/* <h2 class="text-white text-2xl text-white mt-6">Player Expenses $<spanid="players_total">5000</span></h2>  */}
+                                     

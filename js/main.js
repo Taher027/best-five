@@ -40,7 +40,6 @@ function selectPlayer(playerBtn){
     
 
     displayPlayerName(playerArray);
-    return playerArraylength;
 
 }
 
