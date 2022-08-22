@@ -40,7 +40,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Shahid Afridi</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_1" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Hasim Amla</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_2" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Daniel Victory</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_3" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Shoheb Malik</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_4" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Babar Azam</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_5" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Shahin Afridi</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_6" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Moin Ali</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_7" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Sakib Al</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_8" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Kene Williamson</h2>
                             <div class="card-actions">
-                                <button class="btn_width">Select</button>
+                                <button id="btn_9" class="btn_width" onclick="selectPlayer(this)">Select</button>
                             </div>
                         </div>
                     </div>
@@ -143,13 +143,9 @@
                     <div class="selected_player">
                         <h1 class="text-white text-center text-2xl font-semibold">Select Your Best Five</h1>
                         <div class="players_list">
-                            <ul class="mt-8">
-                                <li class="text-white">1. players-1</li>
-                                <li class="text-white">2. players-2</li>
-                                <li class="text-white">3. players-3</li>
-                                <li class="text-white">4. players-4</li>
-                                <li class="text-white">5. players-5</li>
-                            </ul>
+                            <table id="player_list" class="mt-8 table">
+
+                            </table>
                         </div>
                     </div>
 
@@ -161,17 +157,19 @@
                                     <h3 class="text-2xl text-white">PerPlayer</h3>
                                 </div>
                                 <div class="">
-                                    <input type="number" name="" id="" value="1000" class="w-20 py-2 px-4">
+                                    <input type="number" name="" id="perPlayer_cost" value="1000"
+                                        class="w-20 py-2 px-4">
                                 </div>
                             </div>
-                            <button class="btn_width mt-6">Calculate</button>
-                            <h2 class="text-white text-2xl text-white mt-6">Player Expenses $<span>5000</span></h2>
+                            <button class="btn_width mt-6" id="player_calculate_btn">Calculate</button>
+                            <h2 class="text-white text-2xl text-white mt-6">Player Expenses $<span
+                                    id="players_total">5000</span></h2>
                             <div class="grid grid-cols-2 mt-6">
                                 <div class="title">
                                     <h3 class="text-2xl text-white">Manager</h3>
                                 </div>
                                 <div class="">
-                                    <input type="number" name="" id="" value="2000" class="w-20 py-2 px-4">
+                                    <input type="number" name="" id="manager_cost" value="2000" class="w-20 py-2 px-4">
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mt-4">
@@ -179,21 +177,21 @@
                                     <h3 class="text-2xl text-white">Coach</h3>
                                 </div>
                                 <div class="">
-                                    <input type="number" name="" id="" value="4000" class="w-20 py-2 px-4">
+                                    <input type="number" name="" id="coach_cost" value="4000" class="w-20 py-2 px-4">
                                 </div>
                             </div>
 
                             <button class="btn_width mt-6">Calclate total</button>
-                            
+
                             <div class="grid grid-cols-2">
                                 <div>
                                     <h3 class="mt-4 text-white text-2xl ">Total</h3>
                                 </div>
                                 <div>
-                                    <p class="mt-4 text-white text-2xl ">$<span>11000</span></p>
+                                    <p class="mt-4 text-white text-2xl ">$<span id="total_cost">11000</span></p>
                                 </div>
                             </div>
-                           
+
                         </div>
 
 
@@ -204,10 +202,14 @@
             </div>
         </section>
     </main>
-<hr class="w-100 ">
+    <hr class="w-100 ">
     <footer class="bg-gray-800 py-16">
         <p class="text-white font-semibold text-center">Copyright @ 2022 All Rights Reserved.</p>
     </footer>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/main.js"></script>
+<script src="js/playerCost.js"></script>
 </body>
 
 </html>
