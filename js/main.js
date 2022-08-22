@@ -36,10 +36,41 @@ function selectPlayer(playerBtn){
     }
     
     playerArray.push(playerObj)
-    const playerArraylength = playerArray.length;
     
 
     displayPlayerName(playerArray);
 
 }
 
+// button disable after click 
+
+
+document.getElementById("btn1").addEventListener('click', function(){
+    this.disabled = true;
+    
+})
+document.getElementById("btn2").addEventListener('click', function(){
+    this.disabled = true;
+})
+document.getElementById("btn3").addEventListener('click', function(){
+    this.disabled = true;
+})
+document.getElementById("btn4").addEventListener('click', function(){
+    this.disabled = true;
+
+})
+document.getElementById("btn5").addEventListener('click', function(){
+    this.disabled = true;
+})
+document.getElementById("btn6").addEventListener('click', function(){
+    this.disabled = true;
+})
+document.getElementById("btn7").addEventListener('click', function(){
+    this.disabled = true;
+})
+document.getElementById("btn8").addEventListener('click', function(){
+    this.disabled = true;
+})
+document.getElementById("btn9").addEventListener('click', function(){
+    this.disabled = true;
+})

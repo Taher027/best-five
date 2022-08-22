@@ -9,9 +9,7 @@
     background-color: blue;
     color: white;
 }
-.btn_width:hover{
-    background-color: blueviolet;
-}
+
 .selected_player{
     background-color: black;
     padding: 50px 10px 50px 10px;
